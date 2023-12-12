@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form Register</title>
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center p-3">SignUp Form</h1>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img
+            src="computer.jpg"
+            class="w-100 h-100 rounded"
+            alt=""
+            srcset=""
+          />
+        </div>
+
+        <div class="col-sm-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div
+                class="alert alert-success d-block"
+                id="successAlert"
+                role="alert"
+              ></div>
+              <div
+                class="alert alert-danger d-block"
+                id="dangerAlert"
+                role="alert"
+              ></div>
+
+              <form id="register">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="FirstName">FirstName</label>
+                    <input
+                      type="text"
+                      name=""
+                      id="FirstName"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="LastName">LastName</label>
+                    <input
+                      type="text"
+                      name=""
+                      id="LastName"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="Password">Password</label>
+                    <input
+                      type="password"
+                      name=""
+                      onkeyup="checkPasswordLength()"
+                      id="Password"
+                      class="form-control"
+                    />
+                    <span id="passwordHepler"></span>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="Confirm Password">Confirm Password</label>
+                    <input
+                      type="password"
+                      name=""
+                      onkeyup="checkConfirmPassword()"
+                      id="ConfirmPassword"
+                      class="form-control"
+                    />
+                    <span id="confirmPasswordHepler"></span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      name=""
+                      id="email"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <label for="phone">Phone</label>
+                    <input
+                      type="number"
+                      name=""
+                      id="phone"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <button type="submit" class="btn btn-success w-100 mt-2">
+                      Save
+                    </button>
+                  </div>
+                  <div class="col-sm-6">
+                    <button type="reset" class="btn btn-danger w-100 mt-2">
+                      Reset
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="text-center p-3">All users</h1>
+        </div>
+        <div class="col-sm-12">
+          <input type="text" name="" id="search-input" class="form-control rounded-pill mb-3">
+        </div>
+        <table class="table table-hover table-striped" id="userTable">
+          <thead class="thead-dark">
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>action</th>
+
+          </thead>
+
+          <tbody>
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
